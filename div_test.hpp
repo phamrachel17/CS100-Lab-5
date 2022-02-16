@@ -65,8 +65,8 @@ TEST(DivTest, DivStringZero){
 TEST(DivTest, DivStringLarge){
   Base *op1 = new Op(9645.0);
   Base *op2 = new Op(643.0);
-  Base *res = new Mult(op1, op2);
-  EXPECT_EQ(res->stringify(),"(9645.000000*643.000000)");
+  Base *res = new Div(op1, op2);
+  EXPECT_EQ(res->stringify(),"(9645.000000/643.000000)");
   delete op1, op2, res;
 }
 
